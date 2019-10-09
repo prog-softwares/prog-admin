@@ -12,7 +12,7 @@ class DevelopmentConfig(BaseConfig):
     DEBUG = True
     TESTING = True
     ENV = 'dev'
-    SQLALCHEMY_DATABASE_URI = 'mysql+mysqldb://root:mamae0@localhost/multicanal'
+    SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:mamae0@localhost/progadmin'
     SECRET_KEY = 'a9eec0e0-23b7-4788-9a92-318347b9a39f'
     FLASK_ADMIN_SWATCH = 'flatly'
 
@@ -20,7 +20,7 @@ class ProductionConfig(BaseConfig):
     DEBUG = False
     TESTING = False
     ENV = 'production'
-    SQLALCHEMY_DATABASE_URI = 'mysql+mysqldb://root:mamae0@localhost/multicanal'
+    SQLALCHEMY_DATABASE_URI = 'mysql+mysqldb://root:mamae0@localhost/progadmin'
 
 config = {
     'dev': 'app.config.DevelopmentConfig',
